@@ -1,5 +1,13 @@
 
-#include "pch.h"
+#include <algorithm>
+#include <cmath>
+#include <cstdio>
+#include <sstream>
+#include <iostream>
+#include <memory>
+#include <map>
+#include <unordered_map>
+#include <vector>
 
 // #include <bits/stdc++.h>
 
@@ -62,6 +70,8 @@ int arraySplitting(const vector<int> arr, vector<int>::iterator start, vector<in
 	return 1;
 }
 
+#if 0
+
 int main() {
 	// ofstream fout(getenv("OUTPUT_PATH"));
 
@@ -112,6 +122,7 @@ int main() {
 
 	return 0;
 }
+#endif
 
 vector<string> split_string(string input_string) {
 	string::iterator new_end = unique(input_string.begin(), input_string.end(), [](const char &x, const char &y) {
