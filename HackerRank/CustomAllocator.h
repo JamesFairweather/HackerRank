@@ -12,12 +12,12 @@ public:
 	using pointer = T * ;
 	using const_pointer = const T *;
 
-	using void_pointer = void *;
-	using const_void_pointer = const void *;
+	using void_pointer = void *;// optional
+	using const_void_pointer = const void *;// optional
 
 	using size_type = size_t;
 
-	using difference_type = std::ptrdiff_t;
+	using difference_type = std::ptrdiff_t; // optional
 
 	template<class U>
 	struct rebind {
@@ -36,6 +36,7 @@ public:
 		return static_cast<pointer>(operator new(sizeof(T) * numObjects));
 	}
 
+	// optional
 	pointer allocate(size_type numObjects, const_void_pointer hint) {
 		return allocate(numObjects);
 	}
@@ -44,15 +45,18 @@ public:
 		operator delete(p);
 	}
 
+	// optional
 	size_type max_size() const {
 		return std::numeric_limits<size_type>::max();
 	}
 
+	// optional
 	template<class U, class... Args>
 	void construct(U *p, Args && ...args) {
 		new (p) U(std::forward<Args>(args)...);
 	}
 
+	// optional
 	template<class U>
 	void destroy(U *p) {
 		p->~U();
