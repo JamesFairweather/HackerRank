@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\HackerRank">
+      <UniqueIdentifier>{157eaaa9-26f1-46b2-b57d-ff16c36166c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -28,6 +31,9 @@
     </ClCompile>
     <ClCompile Include="CustomAllocator.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerRank\Candies.cpp">
+      <Filter>Source Files\HackerRank</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

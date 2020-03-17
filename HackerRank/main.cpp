@@ -10,8 +10,14 @@
 
 #include "CustomAllocator.h"
 
+extern int Candies();
+
 int main() {
 
+	int result = 0;
+	result += Candies();
+
+	/*
 	using TAint = TrackingAllocator<int>;
 	using TAdouble = TAint::rebind<double>::other;
 
@@ -19,5 +25,7 @@ int main() {
 
 	std::cout << v.get_allocator().getAllocations() << std::endl;
 
-	return 0;
+	*/
+
+	return result;
 }
