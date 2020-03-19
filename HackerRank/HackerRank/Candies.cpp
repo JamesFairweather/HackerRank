@@ -19,41 +19,37 @@
 using namespace std;
 
 // Complete the candies function below.
-long candies(const vector<int>& arr) {
+int64_t candies(const vector<int64_t>& arr) {
 
-	int prev = arr[0];
-	long result = 0;
-	int descendCount = 0;// consecutive descending scores
-	int ascendCount = 0;// consecutive ascending scores
+	int n = static_cast<int>(arr.size());
 
-	for (int i = 1; i < static_cast<int>(arr.size()); ++i) {
-
-		int diff = arr[i] - prev;
-		if (diff == 0) {
-			descendCount = ascendCount = 0;// neither ascending nor descending
-		}
-		else if (diff > 0) {
-			++ascendCount;
- 			descendCount = 0;
-		}
-		else if (diff < 0) {
-			++descendCount;
-			if (ascendCount > 1) {
-				--descendCount;
-			}
-			else if (ascendCount == 1) {
-				--result;
-			}
-			ascendCount = 0;
-		}
-
-		result += descendCount;
-		result += ascendCount;
-
-		prev = arr[i];
+	if (n < 2) {
+		return n;
 	}
 
-	return result + static_cast<int>(arr.size());
+	vector<int64_t> max_values(n, 0);
+
+	// forward track
+	for (int i = 1; i < n; i++) {
+		if (arr[i] > arr[i - 1]) {
+			max_values[i] = max_values[i - 1] + 1;
+		}
+	}
+
+	// backwards track
+	for (int i = n - 2; i >= 0; i--) {
+		if (arr[i] > arr[i + 1] && max_values[i] <= max_values[i + 1]) {
+			max_values[i] = max_values[i + 1] + 1;
+		}
+	}
+
+	int64_t result = n;
+	std::for_each(max_values.begin(), max_values.end(), [&result](int64_t v) {
+		result += v;
+	});
+
+	return static_cast<long>(result);
+
 }
 
 int Candies() {
@@ -65,8 +61,6 @@ int Candies() {
 	// cin >> n;
 	// cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-	// vector<int> arr = { 3, 1, 2, 2 };
-	vector<int> arr = { 5 };
 	assert(candies({ 1 }) == 1);
 	assert(candies({ 5 }) == 1);
 	assert(candies({ 1, 1 }) == 2);
@@ -112,20 +106,24 @@ int Candies() {
 	assert(candies({ 10, 3, 8, 8, 4, 4 }) == 9);
 	assert(candies({ 2, 4, 2, 6, 1, 7, 8, 9, 2, 1 }) == 19);
 	assert(candies({ 2, 4, 3, 5, 2, 6, 4, 5 }) == 12);
+	assert(candies({ 9, 2, 3, 6, 5, 4, 3, 2, 2, 2 }) == 22);
 
+	ifstream fin;
 
+	fin.open("HackerRank\\Candies-Testcase-1.txt", ifstream::in);
 
-	/*
-	for (int i = 0; i < n; i++) {
-		int arr_item;
-		cin >> arr_item;
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-		arr[i] = arr_item;
+	int64_t v, n, expectedResult;
+	fin >> expectedResult;
+	fin >> n;
+	vector<int64_t> inputValues;
+	inputValues.reserve(n);
+	while (!fin.eof()) {
+		fin >> v;
+		inputValues.push_back(v);
 	}
-	*/
+	fin.close();
 
-	// long result = candies(static_cast<int>(arr.size()), arr);
+	assert(candies(inputValues) == expectedResult);
 
 	fout << result << "\n";
 
