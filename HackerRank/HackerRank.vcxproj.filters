@@ -35,5 +35,8 @@
     <ClCompile Include="HackerRank\Candies.cpp">
       <Filter>Source Files\HackerRank</Filter>
     </ClCompile>
+    <ClCompile Include="template101Questions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

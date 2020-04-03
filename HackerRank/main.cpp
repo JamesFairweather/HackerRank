@@ -14,10 +14,23 @@
 extern int Candies();
 std::vector<int> parseInts(const std::string& str);
 int prettyPrint();
+int templates101q0();
+int templates101q1();
+int templates101q2();
+int templates101q3();
+int templates101q4();
+int templates101q5();
 
 int main() {
 
 	int result = 0;
+	result += templates101q0();
+	result += templates101q1();
+	result += templates101q2();
+	result += templates101q3();
+	result += templates101q4();
+	result += templates101q5();
+
 	result += Candies();
 	result += prettyPrint();
 
