@@ -31,22 +31,17 @@ namespace {
 	public:
 		std::vector<int> twoSum(const std::vector<int>& nums, int target) {
 			std::vector<int> ret(2);
-			std::unordered_map<int, int> m;
+			std::unordered_map<int, int> m; // map of the values in the array to the index at which that value is located.
 
 			for (auto j = nums.cbegin(); j < nums.cend(); ++j) {
-				m[*j] = static_cast<int>(std::distance(nums.begin(), j));
-			}
-
-			for (auto i = nums.begin(); i < nums.end(); ++i) {
-				auto j = m.find(target - *i);
-
-				if (j != m.end()) {
-					int distance = static_cast<int>(std::distance(nums.begin(), i));
-					if (j->second != distance) {
-						ret[0] = distance;
-						ret[1] = j->second;
-						return ret;
-					}
+				auto i = m.find(target - *j);
+				if (i != m.end()) {
+					ret[0] = static_cast<int>(std::distance(nums.begin(), j));
+					ret[1] = i->second;
+					break;
+				}
+				else {
+					m[*j] = static_cast<int>(std::distance(nums.begin(), j));
 				}
 			}
 
