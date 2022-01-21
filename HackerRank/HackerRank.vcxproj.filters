@@ -38,5 +38,8 @@
     <ClCompile Include="template101Questions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HackerRank\dequeue.cpp">
+      <Filter>Source Files\HackerRank</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

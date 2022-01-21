@@ -11,7 +11,12 @@
 
 #include "CustomAllocator.h"
 
+struct Vector2 {
+	float x, y;
+};
+
 extern int Candies();
+int dequeeHackerrank();
 std::vector<int> parseInts(const std::string& str);
 int prettyPrint();
 int templates101q0();
@@ -21,9 +26,15 @@ int templates101q3();
 int templates101q4();
 int templates101q5();
 
+double getSlope(const std::vector<Vector2>& points);
+
 int main() {
 
+	//void* a = _malloc_base(16);
+	//free(a);
+
 	int result = 0;
+
 	result += templates101q0();
 	result += templates101q1();
 	result += templates101q2();
@@ -31,11 +42,32 @@ int main() {
 	result += templates101q4();
 	result += templates101q5();
 
+	const std::vector<Vector2> points = {
+		{ 1932, 197 },
+		{ 1936, 203 },
+		{ 1948, 198 },
+		{ 1952, 204 },
+		{ 1956, 212 },
+		{ 1960, 216 },
+		{ 1964, 218 },
+		{ 1968, 224 },
+		{ 1972, 223 },
+		{ 1976, 225 },
+		{ 1980, 236 }
+	};
+
+	double slope2 = getSlope(points);
+
+	// slope for the set of points above should be about 0.755.
+
+	/*
 	result += Candies();
 	result += prettyPrint();
 
 	auto v = parseInts("23,52,2,6");
 
+ 	dequeeHackerrank();
+*/
 
 	/*
 	using TAint = TrackingAllocator<int>;
@@ -87,4 +119,18 @@ int prettyPrint() {
 	std::cout << std::scientific << std::uppercase << std::noshowpos << std::setprecision(9) << C << std::endl;
 
 	return 0;
+}
+
+double getSlope(const std::vector<Vector2>& points) {
+	double pointCount = static_cast<double>(points.size());
+	double sumX = 0.0, sumX2 = 0.0, sumY = 0.0, sumXY = 0.0;
+
+	for (auto&& p : points) {
+		sumX += p.x;
+		sumX2 += p.x * p.x;
+		sumY += p.y;
+		sumXY += p.x * p.y;
+	}
+
+	return (sumXY - ((sumX * sumY) / pointCount)) / (sumX2 - (sumX * sumX / pointCount));
 }
