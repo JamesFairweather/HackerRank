@@ -18,6 +18,7 @@ struct Vector2 {
 extern int Candies();
 int dequeeHackerrank();
 std::vector<int> parseInts(const std::string& str);
+void LeetCode_TwoSum_Test();
 int prettyPrint();
 int templates101q0();
 int templates101q1();
@@ -30,6 +31,7 @@ double getSlope(const std::vector<Vector2>& points);
 
 int main() {
 
+	LeetCode_TwoSum_Test();
 	//void* a = _malloc_base(16);
 	//free(a);
 

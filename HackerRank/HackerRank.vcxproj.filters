@@ -16,6 +16,9 @@
     <Filter Include="Source Files\HackerRank">
       <UniqueIdentifier>{157eaaa9-26f1-46b2-b57d-ff16c36166c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\LeetCode">
+      <UniqueIdentifier>{86b38224-3021-4821-be37-93b46d28530b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -40,6 +43,9 @@
     </ClCompile>
     <ClCompile Include="HackerRank\dequeue.cpp">
       <Filter>Source Files\HackerRank</Filter>
+    </ClCompile>
+    <ClCompile Include="LeetCode\TwoSum.cpp">
+      <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
