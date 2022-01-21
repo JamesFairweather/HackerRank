@@ -5,16 +5,9 @@
 
 // Make this fancier!!
 template<typename T, typename U>
-U add(T i, U j) {
+auto add(T i, U j) {
     return i + j;
 }
-
-// specialized version of add for adding a double to a float
-template<>
-double add<float, double>(float i, double j) {
-	return static_cast<double>(i) + j;
-}
-
 
 int templates101q0() {
     int i = 1;
@@ -32,13 +25,13 @@ int templates101q0() {
     float f = 3.0f;
     double d = 10.0;
     // write code here that adds f and d
-	double dResult = add(f, d);
+	double dResult = add<double>(f, d);
 
     std::string hello = "hello";
     const char* world = " world!";
     // write code here that adds hello and world
 
-	std::string strOut = add(hello, std::string(world));
+	auto strOut = add(hello, world);
 
 	return 0;
 }
@@ -111,13 +104,14 @@ void print(const std::pair<T, U>& p) {
 }
 
 void print(int i) {
-	std::cout << "int override" << std::endl;
+	std::cout << "int overload" << std::endl;
 }
 
 template<typename T>
-void printVec(const std::vector<T> v) {
+void printVec(const std::vector<T>& v) {
 	for (const auto& elem : v) {
 		print<T>(elem);
+		print(elem);// this is what we want!
 	}
 }
 
@@ -137,15 +131,20 @@ int templates101q2() {
 // to make template type deduction on q3f deduce T to be a int&&?
 // if yes, give an example where that happens, if not, why not?
 template<typename T>
-void q3f(T&&) {
+void q3f(void(*F)(T)) {
     /*blank*/
+}
+
+void g(int&&) {
+
 }
 
 /*blank*/
 
 int templates101q3() {
-	int value = 5;
-    q3f(value);
+	//int&& i = 1;
+	//int value = 5;
+    q3f(g);
 
 	return 0;
 }
@@ -168,11 +167,15 @@ void q4f(T x) {
     std::cout << "generic T" << std::endl;
 }
 
+// if you put this *after* the generic T* overload specicialation, it does the expected thing!!!!
+// moral of the story: don't use template specialization on free functions like this.  It's used for
+// classes.
+/*
 template<>
 void q4f(int* x) {
     std::cout << "int* specialization" << std::endl;
 }
-
+*/
 template<typename T>
 void q4f(T* x) {
     std::cout << "generic T* overload" << std::endl;
@@ -194,9 +197,21 @@ int templates101q4() {
 
 // Write some code here....
 // This involves wrting a template with variable args.
+/*
+template<int I>
+int fib = fib<I-1> + fib<I-2>
+
+// defines for 1 & 0
+template<>
+int fib<0> = 1;
+
+template<>
+int fib<1> = 1;
+*/
 
 int templates101q5() {
-	int fib_25 = 9;/* write some code here */;
+//	int fib_25 = fib<2>;
 
-	return fib_25 == 6;
+//	return fib_25;
+	return 0;
 }
