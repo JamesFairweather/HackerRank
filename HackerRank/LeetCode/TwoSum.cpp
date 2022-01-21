@@ -31,7 +31,9 @@ namespace {
 	public:
 		std::vector<int> twoSum(const std::vector<int>& nums, int target) {
 			std::vector<int> ret(2);
-			std::unordered_map<int, int> m; // map of the values in the array to the index at which that value is located.
+			std::unordered_map<int, int> m(nums.size() - 1);
+			// map of the values in the array to the index at which that value is located.
+			// the unordered_map (a hash map) is much faster than the map (a binary tree)
 
 			for (auto j = nums.cbegin(); j < nums.cend(); ++j) {
 				auto i = m.find(target - *j);
