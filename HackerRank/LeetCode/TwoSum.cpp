@@ -30,8 +30,8 @@ namespace {
 	class Solution {
 	public:
 		std::vector<int> twoSum(const std::vector<int>& nums, int target) {
-			std::vector<int> ret;
-			std::map<int, int> m;
+			std::vector<int> ret(2);
+			std::unordered_map<int, int> m;
 
 			for (auto j = nums.cbegin(); j < nums.cend(); ++j) {
 				m[*j] = static_cast<int>(std::distance(nums.begin(), j));
@@ -40,10 +40,13 @@ namespace {
 			for (auto i = nums.begin(); i < nums.end(); ++i) {
 				auto j = m.find(target - *i);
 
-				if (j != m.end() && j->second != std::distance(nums.begin(), i)) {
-					ret.push_back(static_cast<int>(std::distance(nums.begin(), i)));
-					ret.push_back(j->second);
-					return ret;
+				if (j != m.end()) {
+					int distance = static_cast<int>(std::distance(nums.begin(), i));
+					if (j->second != distance) {
+						ret[0] = distance;
+						ret[1] = j->second;
+						return ret;
+					}
 				}
 			}
 
