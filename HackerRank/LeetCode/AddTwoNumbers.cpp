@@ -17,6 +17,7 @@
 
 #include <iostream>
 #include <memory>
+#include <vector>
 
 struct ListNode {
     int val;
@@ -30,56 +31,81 @@ class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 
+        ListNode* ret = l1;
         int carry = 0;
+        int l2_val = 0;
 
-        while (l1->next != nullptr) {
-            int l2_value = 0;
+        for(;;) {
+            l2_val = 0;
             if (l2 != nullptr) {
-                l2_value = l2->val;
+                l2_val = l2->val;
                 l2 = l2->next;
             }
 
-            l1->val += l2_value + carry;
+            l1->val += l2_val + carry;
             carry = 0;
             if (l1->val > 9) {
                 l1->val -= 10;
                 carry = 1;
             }
 
-            l1 = l1->next;
-        }
-
-        if (l2 != nullptr) {
-            l1->next = l2;
-            l2->val += carry;
-
-            if (l2->val > 9) {
-                if (l2->next) {
-                    l2->next->val++;
+            if (l1->next == nullptr) {
+                if (l2 == nullptr) {
+                    break; // for(;;)
                 }
                 else {
-
+                    // join l2 to l1
+                    l1->next = l2;
+                    l2 = nullptr;
                 }
             }
 
-
-
+            l1 = l1->next;
         }
 
-        return l1;
+        if (carry != 0) {
+            l1->next = new ListNode(1);
+        }
+
+        return ret;
     }
 };
+
+ListNode* makeList(const std::vector<int>& input) {
+    ListNode *head = nullptr, *current = nullptr;
+
+    for (auto v : input) {
+        ListNode* node = new ListNode(v);
+
+        if (current != nullptr) {
+            current->next = node;
+        }
+        else {
+            head = node;
+        }
+        current = node;
+    }
+
+    return head;
+}
 
 void LeetCode_AddTwoNumbers_Test() {
     Solution s;
 
-    std::shared_ptr<ListNode> l1 = std::make_shared<ListNode>(5);
+    auto l1 = makeList({ 1, 9, 9 }); 
+    auto l2 = makeList({ 9 });
 
-    s.addTwoNumbers(l1.get(), nullptr);
+    auto result = s.addTwoNumbers(l2, l1);
 
-    while (l1 != nullptr) {
-        std::cout << l1->val;
-        l1 = l1->next;
+    for (;;) {
+        std::cout << result->val;
+        result = result->next;
+        if (result != nullptr) {
+            std::cout << ", ";
+        }
+        else {
+            std::cout << std::endl;
+            break;
+        }
     }
-
 }
