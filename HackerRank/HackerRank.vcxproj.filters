@@ -47,5 +47,8 @@
     <ClCompile Include="LeetCode\TwoSum.cpp">
       <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="LeetCode\AddTwoNumbers.cpp">
+      <Filter>Source Files\LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
