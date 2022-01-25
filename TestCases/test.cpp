@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../HackerRank/LeetCode/LeetCode.h"
+#include "../LeetCode/LeetCode.h"
 
 TEST(TestCase_LeetCode_TwoSum, Test1) {
 	LeetCode::Solution sln;

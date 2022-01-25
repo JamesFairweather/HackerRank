@@ -9,24 +9,9 @@ You may assume that each input would have exactly one solution, and you may not 
 You can return the answer in any order.
 */
 
+#include "pch.h"
+
 #include "LeetCode.h"
-
-#include <assert.h>
-#include <iostream>
-#include <cstdio>
-#include <sstream>
-
-#include <algorithm>
-//#include <cmath>
-//#include <cstdio>
-#include <sstream>
-#include <iostream>
-#include <fstream>
-#include <iosfwd>
-#include <memory>
-#include <map>
-#include <unordered_map>
-#include <vector>
 
 namespace LeetCode {
 

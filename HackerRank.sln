@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HackerRank", "HackerRank\HackerRank.vcxproj", "{B84A6EC4-95D8-44C4-A6DB-4386885F9CAD}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCases", "TestCases\TestCases.vcxproj", "{CCC7B141-499A-4802-8096-0C1F127ADD50}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LeetCode", "LeetCode\LeetCode.vcxproj", "{19D8EC8E-79CD-4CFE-AC2E-F89816115906}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "TestCases\TestCases.vcxproj", "{CCC7B141-499A-4802-8096-0C1F127ADD50}"
+	ProjectSection(ProjectDependencies) = postProject
+		{19D8EC8E-79CD-4CFE-AC2E-F89816115906} = {19D8EC8E-79CD-4CFE-AC2E-F89816115906}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +36,14 @@ Global
 		{CCC7B141-499A-4802-8096-0C1F127ADD50}.Release|x64.Build.0 = Release|x64
 		{CCC7B141-499A-4802-8096-0C1F127ADD50}.Release|x86.ActiveCfg = Release|Win32
 		{CCC7B141-499A-4802-8096-0C1F127ADD50}.Release|x86.Build.0 = Release|Win32
+		{19D8EC8E-79CD-4CFE-AC2E-F89816115906}.Debug|x64.ActiveCfg = Debug|x64
+		{19D8EC8E-79CD-4CFE-AC2E-F89816115906}.Debug|x64.Build.0 = Debug|x64
+		{19D8EC8E-79CD-4CFE-AC2E-F89816115906}.Debug|x86.ActiveCfg = Debug|Win32
+		{19D8EC8E-79CD-4CFE-AC2E-F89816115906}.Debug|x86.Build.0 = Debug|Win32
+		{19D8EC8E-79CD-4CFE-AC2E-F89816115906}.Release|x64.ActiveCfg = Release|x64
+		{19D8EC8E-79CD-4CFE-AC2E-F89816115906}.Release|x64.Build.0 = Release|x64
+		{19D8EC8E-79CD-4CFE-AC2E-F89816115906}.Release|x86.ActiveCfg = Release|Win32
+		{19D8EC8E-79CD-4CFE-AC2E-F89816115906}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

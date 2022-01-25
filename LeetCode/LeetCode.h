@@ -1,6 +1,4 @@
 
-#include <string>
-#include <vector>
 
 namespace LeetCode {
 	class Solution {
