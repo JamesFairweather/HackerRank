@@ -161,6 +161,7 @@
     <ClCompile Include="HackerRank\Candies.cpp" />
     <ClCompile Include="HackerRank\dequeue.cpp" />
     <ClCompile Include="LeetCode\AddTwoNumbers.cpp" />
+    <ClCompile Include="LeetCode\LongestSubstringWithoutRepeatingCharacters.cpp" />
     <ClCompile Include="LeetCode\TwoSum.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="template101Questions.cpp" />

@@ -50,5 +50,8 @@
     <ClCompile Include="LeetCode\AddTwoNumbers.cpp">
       <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="LeetCode\LongestSubstringWithoutRepeatingCharacters.cpp">
+      <Filter>Source Files\LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
