@@ -15,3 +15,14 @@ TEST(TestCase_LeetCode_TwoSum, Test1) {
 	EXPECT_TRUE(std::find(response.begin(), response.end(), 1) != response.end());
 	EXPECT_TRUE(std::find(response.begin(), response.end(), 2) != response.end());
 }
+
+TEST(TestCase_LeetCode_LongestSubstring, Test1) {
+	LeetCode::Solution sln;
+
+	EXPECT_EQ(sln.lengthOfLongestSubstring(" "), 1);
+	EXPECT_EQ(sln.lengthOfLongestSubstring("aab"), 2);
+	EXPECT_EQ(sln.lengthOfLongestSubstring("dvdf"), 3);
+	EXPECT_EQ(sln.lengthOfLongestSubstring("abcabcbb"), 3);
+	EXPECT_EQ(sln.lengthOfLongestSubstring("bbbbb"), 1);
+	EXPECT_EQ(sln.lengthOfLongestSubstring("pwwkew"), 3);
+}

@@ -16,5 +16,7 @@
 #include <memory>
 #include <sstream>
 #include <unordered_map>
+#include <unordered_set>
+#include <set>
 #include <vector>
 #endif //PCH_H
