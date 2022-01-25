@@ -19,7 +19,7 @@ extern int Candies();
 int dequeeHackerrank();
 std::vector<int> parseInts(const std::string& str);
 
-void LeetCode_TwoSum_Test();
+//void LeetCode_TwoSum_Test();
 void LeetCode_AddTwoNumbers_Test();
 
 int prettyPrint();
@@ -32,10 +32,10 @@ int templates101q5();
 
 double getSlope(const std::vector<Vector2>& points);
 
-int main() {
+int mmain() {
 
 	// LeetCode_TwoSum_Test();
-	LeetCode_AddTwoNumbers_Test();
+	// LeetCode_AddTwoNumbers_Test();
 	//void* a = _malloc_base(16);
 	//free(a);
 
