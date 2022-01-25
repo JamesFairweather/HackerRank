@@ -9,7 +9,7 @@
 namespace LeetCode {
     int Solution::lengthOfLongestSubstring(const std::string& s) {
 
-        std::set<char> subString;
+        std::unordered_set<char> subString(128);
 
         if (s.empty()) {
             return 0;
