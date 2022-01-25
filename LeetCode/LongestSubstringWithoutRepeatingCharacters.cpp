@@ -16,6 +16,7 @@ namespace LeetCode {
         }
 
         std::size_t longestSubstring = 0;
+        auto startSeq = s.begin();
 
         for (auto i = s.begin(); i != s.end(); ++i) {
             if (subString.find(*i) == subString.end()) {
@@ -25,7 +26,13 @@ namespace LeetCode {
                 if (longestSubstring < subString.size()) {
                     longestSubstring = subString.size();
                 }
-                subString.clear();
+
+                do {
+                    // advance the trailing pointer until the duplicate entry is removed.
+                    subString.erase(*startSeq);
+                    ++startSeq;
+                } while (subString.find(*i) != subString.end());
+
                 subString.insert(*i);
             }
         }
