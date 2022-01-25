@@ -159,7 +159,6 @@
     <ClCompile Include="CustomAllocator.cpp" />
     <ClCompile Include="dequeue.cpp" />
     <ClCompile Include="HackerRank.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="template101Questions.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
