@@ -1,93 +1,28 @@
-#include <algorithm>
-#include <cmath>
-#include <cstdio>
-#include <sstream>
-#include <iostream>
-#include <iomanip> // for prettyPrint
-#include <memory>
-#include <map>
-#include <unordered_map>
-#include <vector>
 
-#include "CustomAllocator.h"
+/*
+ * Various potentially useful utility functions I've written over time.
+ */
 
-struct Vector2 {
-	float x, y;
-};
+/*
+result += Candies();
+result += prettyPrint();
 
-extern int Candies();
-int dequeeHackerrank();
-std::vector<int> parseInts(const std::string& str);
+auto v = parseInts("23,52,2,6");
 
-//void LeetCode_TwoSum_Test();
-void LeetCode_AddTwoNumbers_Test();
-
-int prettyPrint();
-int templates101q0();
-int templates101q1();
-int templates101q2();
-int templates101q3();
-int templates101q4();
-int templates101q5();
-
-double getSlope(const std::vector<Vector2>& points);
-
-int mmain() {
-
-	// LeetCode_TwoSum_Test();
-	// LeetCode_AddTwoNumbers_Test();
-	//void* a = _malloc_base(16);
-	//free(a);
-
-	int result = 0;
-
-	result += templates101q0();
-	result += templates101q1();
-	result += templates101q2();
-	result += templates101q3();
-	result += templates101q4();
-	result += templates101q5();
-
-	const std::vector<Vector2> points = {
-		{ 1932, 197 },
-		{ 1936, 203 },
-		{ 1948, 198 },
-		{ 1952, 204 },
-		{ 1956, 212 },
-		{ 1960, 216 },
-		{ 1964, 218 },
-		{ 1968, 224 },
-		{ 1972, 223 },
-		{ 1976, 225 },
-		{ 1980, 236 }
-	};
-
-	double slope2 = getSlope(points);
-
-	// slope for the set of points above should be about 0.755.
-
-	/*
-	result += Candies();
-	result += prettyPrint();
-
-	auto v = parseInts("23,52,2,6");
-
- 	dequeeHackerrank();
+dequeeHackerrank();
 */
 
-	/*
-	using TAint = TrackingAllocator<int>;
-	using TAdouble = TAint::rebind<double>::other;
+/*
+using TAint = TrackingAllocator<int>;
+using TAdouble = TAint::rebind<double>::other;
 
-	std::std::vector<int, TrackingAllocator<int>> v(5);
+std::std::vector<int, TrackingAllocator<int>> v(5);
 
-	std::std::cout << v.get_allocator().getAllocations() << std::endl;
+std::std::cout << v.get_allocator().getAllocations() << std::endl;
 
-	*/
+*/
 
-	return result;
-}
-
+/*
 std::vector<int> parseInts(const std::string& str) {
 	std::stringstream ss(str);
 	std::vector<int> result;
@@ -102,7 +37,9 @@ std::vector<int> parseInts(const std::string& str) {
 
 	return result;
 }
+*/
 
+/*
 int prettyPrint() {
 
 	std::cout << std::setiosflags(std::ios::uppercase);
@@ -126,6 +63,29 @@ int prettyPrint() {
 
 	return 0;
 }
+*/
+
+/*
+struct Vector2 {
+	double x, y;
+};
+const std::vector<Vector2> points = {
+	{ 1932, 197 },
+	{ 1936, 203 },
+	{ 1948, 198 },
+	{ 1952, 204 },
+	{ 1956, 212 },
+	{ 1960, 216 },
+	{ 1964, 218 },
+	{ 1968, 224 },
+	{ 1972, 223 },
+	{ 1976, 225 },
+	{ 1980, 236 }
+};
+
+double slope2 = getSlope(points);
+
+// slope for the set of points above should be about 0.755.
 
 double getSlope(const std::vector<Vector2>& points) {
 	double pointCount = static_cast<double>(points.size());
@@ -140,3 +100,4 @@ double getSlope(const std::vector<Vector2>& points) {
 
 	return (sumXY - ((sumX * sumY) / pointCount)) / (sumX2 - (sumX * sumX / pointCount));
 }
+*/
