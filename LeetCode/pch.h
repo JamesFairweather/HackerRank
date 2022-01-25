@@ -11,6 +11,7 @@
 #include "framework.h"
 
 #include <algorithm>
+#include <bitset>
 #include <iostream>
 #include <map>
 #include <memory>
