@@ -26,3 +26,11 @@ TEST(TestCase_LeetCode_LongestSubstring, Test1) {
 	EXPECT_EQ(sln.lengthOfLongestSubstring("bbbbb"), 1);
 	EXPECT_EQ(sln.lengthOfLongestSubstring("pwwkew"), 3);
 }
+
+TEST(TestCase_LeetCode_FirstMissingPositive, DISABLED_Test1) {
+	LeetCode::Solution sln;
+
+	EXPECT_EQ(sln.firstMissingPositive({ 1, 2, 0 }), 3);
+	EXPECT_EQ(sln.firstMissingPositive({ 3, 4, -1, 1 }), 2);
+	EXPECT_EQ(sln.firstMissingPositive({ 7, 8, 9, 11, 12 }), 1);
+}
