@@ -41,5 +41,8 @@
     <ClCompile Include="MaxProfit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Reverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -35,10 +35,18 @@ TEST(TestCase_LeetCode_FirstMissingPositive, DISABLED_Test1) {
 	EXPECT_EQ(sln.firstMissingPositive({ 7, 8, 9, 11, 12 }), 1);
 }
 
-
 TEST(TestCase_LeetCode_MaxProfit, Test1) {
 	LeetCode::Solution sln;
 
 	EXPECT_EQ(sln.maxProfit({ 7, 1, 5, 3, 6, 4 }), 7);
 	EXPECT_EQ(sln.maxProfit({ 1, 2, 3, 4, 5 }), 4);
+}
+
+TEST(TestCase_LeetCode_Reverse, Test1) {
+	LeetCode::Solution sln;
+
+	EXPECT_EQ(sln.reverse(123), 321);
+	EXPECT_EQ(sln.reverse(964632435), 534236469);
+	EXPECT_EQ(sln.reverse(1964632435), 0);
+	EXPECT_EQ(sln.reverse(-2147483648), 0);
 }

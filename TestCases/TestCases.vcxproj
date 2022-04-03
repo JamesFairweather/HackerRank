@@ -48,6 +48,9 @@
     <ProjectReference Include="..\HackerRank\HackerRank.vcxproj">
       <Project>{b84a6ec4-95d8-44c4-a6db-4386885f9cad}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\LeetCode\LeetCode.vcxproj">
+      <Project>{19d8ec8e-79cd-4cfe-ac2e-f89816115906}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
