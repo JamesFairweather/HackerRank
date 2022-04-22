@@ -18,12 +18,6 @@
     <ClCompile Include="HackerRank.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CustomAllocator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="template101Questions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Candies.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -153,10 +153,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Candies.cpp" />
-    <ClCompile Include="CustomAllocator.cpp" />
     <ClCompile Include="dequeue.cpp" />
     <ClCompile Include="HackerRank.cpp" />
-    <ClCompile Include="template101Questions.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
