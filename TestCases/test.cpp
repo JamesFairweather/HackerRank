@@ -50,7 +50,7 @@ TEST(TestCase_LeetCode_Reverse, Test1) {
 	EXPECT_EQ(sln.reverse(123), 321);
 	EXPECT_EQ(sln.reverse(964632435), 534236469);
 	EXPECT_EQ(sln.reverse(1964632435), 0);
-	EXPECT_EQ(sln.reverse(-2147483648), 0);
+	EXPECT_EQ(sln.reverse(0x80000000 /* -2147483648 */), 0);
 }
 
 TEST(TestCase_LeetCode_SuperPow, Test1) {
