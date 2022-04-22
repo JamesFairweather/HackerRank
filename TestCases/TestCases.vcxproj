@@ -22,7 +22,7 @@
     <ProjectGuid>{ccc7b141-499a-4802-8096-0c1f127add50}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <ProjectName>Tests</ProjectName>
   </PropertyGroup>
