@@ -1,5 +1,7 @@
 #include "pch.h"
 
+#include "gtest/gtest.h"
+
 #include "../LeetCode/LeetCode.h"
 
 TEST(TestCase_LeetCode_TwoSum, Test1) {
@@ -49,4 +51,10 @@ TEST(TestCase_LeetCode_Reverse, Test1) {
 	EXPECT_EQ(sln.reverse(964632435), 534236469);
 	EXPECT_EQ(sln.reverse(1964632435), 0);
 	EXPECT_EQ(sln.reverse(-2147483648), 0);
+}
+
+TEST(TestCase_LeetCode_SuperPow, Test1) {
+	LeetCode::Solution sln;
+
+	EXPECT_EQ(sln.superPow(2, { 1, 5 }), 680);
 }

@@ -1,4 +1,5 @@
 
+#include "pch.h"
 
 namespace LeetCode {
 	class Solution {
@@ -8,5 +9,6 @@ namespace LeetCode {
 		int					firstMissingPositive(const std::vector<int>&);
 		int					maxProfit(const std::vector<int>& prices);
 		int					reverse(int);
+		int					superPow(int a, const std::vector<int>& b);
 	};
 }
