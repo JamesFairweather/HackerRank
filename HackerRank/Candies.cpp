@@ -116,7 +116,7 @@ int Candies() {
 	fin >> expectedResult;
 	fin >> n;
 	vector<int64_t> inputValues;
-	inputValues.reserve(n);
+	inputValues.reserve(static_cast<size_t>(n));
 	while (!fin.eof()) {
 		fin >> v;
 		inputValues.push_back(v);
