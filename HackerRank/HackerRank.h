@@ -1,19 +1,12 @@
 
-#include <algorithm>
-#include <cmath>
-#include <cstdio>
-#include <sstream>
-#include <iostream>
-#include <memory>
-#include <map>
-#include <unordered_map>
-#include <vector>
+#pragma once
 
-#include "pch.h"
+#include <algorithm>
+#include <vector>
 
 namespace HackerRank {
 	class Solution {
 	public:
-		int					candies();
+		int64_t					candies(const std::vector<int64_t>&);
 	};
 }

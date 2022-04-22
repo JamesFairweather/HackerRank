@@ -152,9 +152,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Candies.cpp" />
     <ClCompile Include="CustomAllocator.cpp" />
     <ClCompile Include="dequeue.cpp" />
