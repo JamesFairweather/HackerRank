@@ -56,5 +56,15 @@ TEST(TestCase_LeetCode_Reverse, Test1) {
 TEST(TestCase_LeetCode_SuperPow, Test1) {
 	LeetCode::Solution sln;
 
-	EXPECT_EQ(sln.superPow(2, { 1, 5 }), 680);
+	// EXPECT_EQ(sln.superPow(2, { 1, 5 }), 680);
+	EXPECT_EQ(sln.superPow(7, { 1, 5 }), 763);
+	/*
+	EXPECT_EQ(sln.superPow(7, { 1, 6 }), 1330);
+	EXPECT_EQ(sln.superPow(1480, { 3 }), 188);
+	EXPECT_EQ(sln.superPow(1480, { 4 }), 144);
+	EXPECT_EQ(sln.superPow(2567, { 2 }), 753);
+	EXPECT_EQ(sln.superPow(2567, { 3 }), 986);
+	EXPECT_EQ(sln.superPow(2567, { 4 }), 121);
+	EXPECT_EQ(sln.superPow(2147483647, { 2, 0, 0 }), 1);
+	*/
 }

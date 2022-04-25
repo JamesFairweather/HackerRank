@@ -29,7 +29,7 @@ namespace LeetCode {
 
         power = power % modulus;
 
-        int ret = 1;
+        int64_t ret = 1;
         while (power != 0) {
             ret *= a;
             --power;
